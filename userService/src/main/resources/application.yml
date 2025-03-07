@@ -2,19 +2,19 @@ server:
   port: 8085
 
 
-spring:
+ spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/UBService
+    url: jdbc:mysql://localhost:3306/UGService
     username: root
-    password: root
-    driver-class-name : com.mysql.cj.jdbc.Driver
-
+    password: Root@1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: update
-    show-sql: true
-    properties.hibernate:
-      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
 
 
 eureka:
